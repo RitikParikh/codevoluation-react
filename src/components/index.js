@@ -4,7 +4,8 @@ import React, { Component } from 'react';
 // import Great from './Great';
 // import Welcome from './Welcome'
 // import Hello from './Hello';
-import Message from './Message'
+// import Message from './Message'
+import Counter from './Counter'
 
 class Basic extends Component {
   render() {
@@ -16,7 +17,8 @@ class Basic extends Component {
         {/* <Welcome name = "Dev" heroName="Hello"/> */}
         {/* <Welcome name = "Loooooop" heroName = "OMMMM"/> */}
         {/* <Hello/> */}
-        <Message/>
+        {/* <Message/> */}
+        <Counter count="5"/>
       </div>
     );
   }
