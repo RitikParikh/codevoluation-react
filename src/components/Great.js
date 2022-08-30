@@ -1,5 +1,5 @@
 import React from 'react'
 
-const Great = ()=>  <h1>Hello Ritik</h1>;
+const Great = (prop) =>  <h1>Hello {prop.name}</h1>;
 
 export default Great
