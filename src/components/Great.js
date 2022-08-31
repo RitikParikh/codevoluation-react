@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Great = (props) => {
+const Great = ({name, heroName, children}) => {
     return (
         <div>
-            <h1>Hello {props.name}</h1>
-            {props.children}
+            <h1>Hello {name} axa {heroName}</h1>
+            {children}
         </div>
     );
 }    
