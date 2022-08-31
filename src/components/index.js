@@ -1,7 +1,7 @@
 // import logo from '../logo.svg';
 import '../App.css';
 import React, { Component } from 'react';
-import Great from './Great';
+// import Great from './Great';
 // import Welcome from './Welcome'
 // import Hello from './Hello';
 // import Message from './Message'
