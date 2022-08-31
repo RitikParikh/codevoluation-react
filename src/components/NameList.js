@@ -4,7 +4,7 @@ class NameList extends Component {
     constructor(props) {
         super(props);
         this.state = {
-           list : (this?.props?.arr).map((value)=> <Person person = {value}/>)
+           list : (this?.props?.arr).map((value)=> <Person key={value.id} person = {value}/>)
         };
     }
   render() {
