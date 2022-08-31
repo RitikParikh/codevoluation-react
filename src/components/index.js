@@ -8,7 +8,8 @@ import React, { Component } from 'react';
 // import Counter from './Counter'
 // import FunctionClick from './FunctionClick'
 // import ClassClick from './ClassClick'
-import EventBind from './EventBind'
+// import EventBind from './EventBind'
+import ParentComponent from './ParentComponent'
 
 class Basic extends Component {
   render() {
@@ -24,7 +25,8 @@ class Basic extends Component {
         {/* <Counter count="5"/> */}
         {/* <FunctionClick/> */}
         {/* <ClassClick/> */}
-        <EventBind/>
+        {/* <EventBind/> */}
+        <ParentComponent/>
       </div>
     );
   }
