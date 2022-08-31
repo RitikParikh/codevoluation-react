@@ -30,6 +30,10 @@ class Counter extends Component {
    }
     incrementChangeByFive() {
         this.incrementChange()
+     /* this.incrementChange()
+        this.incrementChange()
+        this.incrementChange()
+        this.incrementChange() */
         return true;
   }
   render() {
