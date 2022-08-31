@@ -10,10 +10,12 @@ import React, { Component } from 'react';
 // import ClassClick from './ClassClick'
 // import EventBind from './EventBind'
 // import ParentComponent from './ParentComponent'
-import UserGreeting from './UserGreeting'
+// import UserGreeting from './UserGreeting'
+import NameList from './NameList'
 
 class Basic extends Component {
   render() {
+    let dynamicArray = [{name:"Bruce",age:30,id:1},{name:"Bruce",age:30,id:2},{name:"Bruce",age:30,id:3}];
     return (
       <div className="App">
         {/* <Great name = "Dev" heroName="Hello"><p>HI</p></Great> */}
@@ -28,7 +30,8 @@ class Basic extends Component {
         {/* <ClassClick/> */}
         {/* <EventBind/> */}
         {/* <ParentComponent/> */}
-        <UserGreeting/>
+        {/* <UserGreeting/> */}
+        <NameList arr = {dynamicArray} />
       </div>
     );
   }
