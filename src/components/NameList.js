@@ -14,4 +14,4 @@ class NameList extends Component {
   }
 }
 
-export default NameList
+export default NameList 
