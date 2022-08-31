@@ -7,7 +7,8 @@ import React, { Component } from 'react';
 // import Message from './Message'
 // import Counter from './Counter'
 // import FunctionClick from './FunctionClick'
-import ClassClick from './ClassClick'
+// import ClassClick from './ClassClick'
+import EventBind from './EventBind'
 
 class Basic extends Component {
   render() {
@@ -22,7 +23,8 @@ class Basic extends Component {
         {/* <Message/> */}
         {/* <Counter count="5"/> */}
         {/* <FunctionClick/> */}
-        <ClassClick/>
+        {/* <ClassClick/> */}
+        <EventBind/>
       </div>
     );
   }
