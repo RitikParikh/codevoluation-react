@@ -1,6 +1,9 @@
 // import logo from '../logo.svg';
-import '../App.css';
 import React, { Component } from 'react';
+import '../App.css';
+import '../styles/appStyles.css';
+import styles from '../styles/appStyles.module.css';
+import '../App.css';
 // import Great from './Great';
 // import Welcome from './Welcome'
 // import Hello from './Hello';
@@ -11,14 +14,18 @@ import React, { Component } from 'react';
 // import EventBind from './EventBind'
 // import ParentComponent from './ParentComponent'
 // import UserGreeting from './UserGreeting'
-import NameList from './NameList'
+// import NameList from './NameList'
+// import Stylesheet from './Stylesheet'
+import Inline from './Inline'
 
 class Basic extends Component {
   render() {
-    let dynamicArray = [{name:"Bruce",age:30,id:1},{name:"Bruce",age:30,id:2},{name:"Bruce",age:30,id:3}];
-    const names = [ ' Bruce ' , ' Clark ' , ' Diana ' ];
+    // let dynamicArray = [{name:"Bruce",age:30,id:1},{name:"Bruce",age:30,id:2},{name:"Bruce",age:30,id:3}];
+    // const names = [ ' Bruce ' , ' Clark ' , ' Diana ' ];
     return (
       <div className="App">
+        <h1 className="error">Error</h1>
+        <h1 className={styles.success}>Success</h1>
         {/* <Great name = "Dev" heroName="Hello"><p>HI</p></Great> */}
         {/* <Great name = "Loooooop" heroName = "OMMMM"/> */}
         {/* <Great name = "Orign" heroName = "qaz"/> */}
@@ -32,7 +39,9 @@ class Basic extends Component {
         {/* <EventBind/> */}
         {/* <ParentComponent/> */}
         {/* <UserGreeting/> */}
-        <NameList arr = {dynamicArray} names={names} />
+        {/* <NameList arr = {dynamicArray} names={names} /> */}
+        {/* <Stylesheet primary={true}/> */}
+        <Inline/>
       </div>
     );
   }
