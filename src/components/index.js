@@ -16,6 +16,7 @@ import NameList from './NameList'
 class Basic extends Component {
   render() {
     let dynamicArray = [{name:"Bruce",age:30,id:1},{name:"Bruce",age:30,id:2},{name:"Bruce",age:30,id:3}];
+    const names = [ ' Bruce ' , ' Clark ' , ' Diana ' ];
     return (
       <div className="App">
         {/* <Great name = "Dev" heroName="Hello"><p>HI</p></Great> */}
@@ -31,7 +32,7 @@ class Basic extends Component {
         {/* <EventBind/> */}
         {/* <ParentComponent/> */}
         {/* <UserGreeting/> */}
-        <NameList arr = {dynamicArray} />
+        <NameList arr = {dynamicArray} names={names} />
       </div>
     );
   }
