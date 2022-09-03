@@ -18,7 +18,9 @@ import '../App.css';
 // import Stylesheet from './Stylesheet'
 // import Inline from './Inline'
 // import Form from './Form'
-import LifecycleA from './LifecycleA'
+// import LifecycleA from './LifecycleA'
+import ParentComp from './ParentComp'
+
 
 class Basic extends Component {
   render() {
@@ -45,7 +47,8 @@ class Basic extends Component {
         {/* <Stylesheet primary={true}/> */}
         {/* <Inline/> */}
         {/* <Form/> */}
-        <LifecycleA/>
+        {/* <LifecycleA/> */}
+        <ParentComp/>
       </div>
     );
   }
