@@ -17,7 +17,8 @@ import '../App.css';
 // import NameList from './NameList'
 // import Stylesheet from './Stylesheet'
 // import Inline from './Inline'
-import Form from './Form'
+// import Form from './Form'
+import LifecycleA from './LifecycleA'
 
 class Basic extends Component {
   render() {
@@ -43,7 +44,8 @@ class Basic extends Component {
         {/* <NameList arr = {dynamicArray} names={names} /> */}
         {/* <Stylesheet primary={true}/> */}
         {/* <Inline/> */}
-        <Form/>
+        {/* <Form/> */}
+        <LifecycleA/>
       </div>
     );
   }
