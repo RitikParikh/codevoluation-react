@@ -11,12 +11,12 @@ export class ParentComp extends Component {
     }
     componentDidMount() {
         // let i=0;
-        setInterval(()=>{
-            // i++;
-            this.setState({
-                name:"RItik"
-            });
-        }, 2000)
+        // setInterval(()=>{
+        //     // i++;
+        //     this.setState({
+        //         name:"RItik"
+        //     });
+        // }, 2000)
     }
   render() {
     console.log("Parent componect Rander");

@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import '../App.css';
 // import '../styles/appStyles.css';
 // import styles from '../styles/appStyles.module.css';
-import '../App.css';
 // import Great from './Great';
 // import Welcome from './Welcome'
 // import Hello from './Hello';
@@ -19,8 +18,10 @@ import '../App.css';
 // import Inline from './Inline'
 // import Form from './Form'
 // import LifecycleA from './LifecycleA'
-import ParentComp from './ParentComp'
-
+// import ParentComp from './ParentComp'
+// import RefsDemo from './RefsDemo'
+// import RefsForm from './RefsForm'
+import RefOTPForm from './RefOTPForm'
 
 class Basic extends Component {
   render() {
@@ -48,7 +49,10 @@ class Basic extends Component {
         {/* <Inline/> */}
         {/* <Form/> */}
         {/* <LifecycleA/> */}
-        <ParentComp/>
+        {/* <ParentComp/> */}
+        {/* <RefsDemo /> */}
+        {/* <RefsForm /> */}
+        <RefOTPForm count ={4} />
       </div>
     );
   }
