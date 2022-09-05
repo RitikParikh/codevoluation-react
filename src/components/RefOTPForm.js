@@ -17,20 +17,20 @@ class RefsDemo extends Component {
     }
     componentDidMount() {
         console.log(this);
-        this.inputRef1.current.focus()
+        if(this.props.focus){
+            this.inputRef1.current.focus()
+        }
     }
     clickHandlers = () => {
         let buttonText = "OTP -";
         for(let i=1;i<=this.props.count;i++){
-            // console.log(this.state[`inputBox${i}`])
             buttonText += this.state[`inputBox${i}`];
         }
         if(this.props.isSubmit){
             this.setState({ button: buttonText });
         }
         else{
-            console.log(buttonText)
-            alert(`Your OTP is-${buttonText}`)
+            alert(`${buttonText}`)
         }
         return true;
     }
@@ -83,6 +83,14 @@ class RefsDemo extends Component {
         if(this.props.spicalCharStop === true){
             value = value.replace(/[^\w\s]/gi, "");
         }
+        if(this.props.numberEnabled === true){
+            value = value.replace(/[A-Z]/gi, "");
+            value = value.replace(/[a-z]/gi, "");
+            value = value.replace(/[^\w\s]/gi, "");
+        }
+        if(this.props.regex){
+            value = value.replace(this.props.regex, "");
+        }
         if(this.paste === true){
             this.paste = false;
             let valueArr = value.split("");
@@ -129,7 +137,6 @@ class RefsDemo extends Component {
                 });  
             }
             else if(value.length > 1){
-                console.log(event)
                 value = this.getLastChar(value,true);
                 let forCheckData = this.forCheck(Number(this.getLastChar(type),true),this.props.count);
                 if(forCheckData.status === true){
@@ -166,20 +173,18 @@ class RefsDemo extends Component {
         let list = [];
         let button ="";
         for(let i=1;i<=this.props.count;i++){
-            list.push(<input type="text" ref={this[`inputRef${i}`]} key={`inputBox${i}`} onKeyDown={(e) => this.onKeyDown(e, `inputBox${i}`)} onChange={(e) => this.handleChange(e, `inputBox${i}`)}  value={this.state[`inputBox${i}`]} autoComplete="new-password" />);
+            let placeholder = this.props.placeHolder.split("");
+            list.push(<input type="text" placeholder={placeholder[i-1]} ref={this[`inputRef${i}`]} key={`inputBox${i}`} onKeyDown={(e) => this.onKeyDown(e, `inputBox${i}`)} onChange={(e) => this.handleChange(e, `inputBox${i}`)}  value={this.state[`inputBox${i}`]} autoComplete="new-password" />);
         }
-        console.log(this.props.isSubmit)
         if(this.props.isSubmit){
-            button = <button type="submit" ref={this[`inputRef${this.props.count+1}`]} onClick={this.clickHandlers} disabled={this.state.disable}>{this.state.button}</button>       
+            button = <><br/><br/><button type="submit" ref={this[`inputRef${this.props.count+1}`]} onClick={this.clickHandlers} disabled={this.state.disable}>{this.state.button}</button><br/><br/></>       
         }
         return (
             <>
-                <div>
+                {/* <div> */}
                     {list}
-                    <br/>
-                    <br/>
                     {button}
-                </div>
+                {/* </div> */}
             </>
         )
     }

@@ -21,7 +21,7 @@ import '../App.css';
 // import ParentComp from './ParentComp'
 // import RefsDemo from './RefsDemo'
 // import RefsForm from './RefsForm'
-import RefOTPForm from './RefOTPForm'
+// import RefOTPForm from './RefOTPForm'
 
 class Basic extends Component {
   render() {
@@ -52,7 +52,9 @@ class Basic extends Component {
         {/* <ParentComp/> */}
         {/* <RefsDemo /> */}
         {/* <RefsForm /> */}
-        <RefOTPForm count ={2} spicalCharStop={true} isSubmit={false}/>
+        {/* <RefOTPForm count ={2} spicalCharStop={true} numberEnabled={true} regex={false} focus={true} isSubmit={false} placeHolder={"DD"}/>-{'\u00A0'}
+        <RefOTPForm count ={2} spicalCharStop={true} numberEnabled={true} regex={false} focus={false} isSubmit={false} placeHolder={"MM"}/>-{'\u00A0'}
+        <RefOTPForm count ={4} spicalCharStop={true} numberEnabled={true} regex={false} focus={false} isSubmit={false} placeHolder={"YYYY"}/> */}
       </div>
     );
   }
