@@ -52,7 +52,7 @@ class Basic extends Component {
         {/* <ParentComp/> */}
         {/* <RefsDemo /> */}
         {/* <RefsForm /> */}
-        <RefOTPForm count ={4} />
+        <RefOTPForm count ={2} spicalCharStop={true} isSubmit={false}/>
       </div>
     );
   }
