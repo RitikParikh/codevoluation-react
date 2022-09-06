@@ -21,16 +21,22 @@ class RefsDemo extends Component {
             this.inputRef1.current.focus()
         }
     }
+    // componentDidUpdate(prevProps, prevState) {
+    //     // if (prevState.data !== this.state.data) {
+    //         this.inputRef1.current.focus()
+    //     // }
+    //   }
     clickHandlers = () => {
-        let buttonText = "OTP -";
+        let buttonText = "";
         for(let i=1;i<=this.props.count;i++){
             buttonText += this.state[`inputBox${i}`];
         }
         if(this.props.isSubmit){
-            this.setState({ button: buttonText });
+            // this.setState({ button: buttonText });
+            this.props.setAlert(`${buttonText}`);
         }
         else{
-            alert(`${buttonText}`)
+            this.props.setAlert(`${buttonText}`)
         }
         return true;
     }

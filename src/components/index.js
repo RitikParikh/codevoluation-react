@@ -21,9 +21,29 @@ import '../App.css';
 // import ParentComp from './ParentComp'
 // import RefsDemo from './RefsDemo'
 // import RefsForm from './RefsForm'
-// import RefOTPForm from './RefOTPForm'
+import RefOTPForm from './RefOTPForm'
+// import FocusInput from './FocusInput'
 
 class Basic extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      alert : '',
+      focus1 : true,
+      focus2 : false,
+      focus3 : false,
+    }
+  }
+  setAlert = (arg) =>{
+    let argsArr = this.state.alert.split("-");
+    if(argsArr.length > 0){
+      console.log("argsArr.length", argsArr.length)
+      this.setState({[`focus${argsArr.length}`] : false},()=>{
+        this.setState({[`focus${argsArr.length+1}`] : true})
+    });
+    this.setState({alert:this.state.alert.length === 0 ? arg : this.state.alert+"-" + arg})
+  }
+}
   render() {
     // let dynamicArray = [{name:"Bruce",age:30,id:1},{name:"Bruce",age:30,id:2},{name:"Bruce",age:30,id:3}];
     // const names = [ ' Bruce ' , ' Clark ' , ' Diana ' ];
@@ -52,10 +72,15 @@ class Basic extends Component {
         {/* <ParentComp/> */}
         {/* <RefsDemo /> */}
         {/* <RefsForm /> */}
-        {/* <RefOTPForm count ={2} spicalCharStop={true} numberEnabled={true} regex={false} focus={true} isSubmit={false} placeHolder={"DD"}/>-{'\u00A0'}
-        <RefOTPForm count ={2} spicalCharStop={true} numberEnabled={true} regex={false} focus={false} isSubmit={false} placeHolder={"MM"}/>-{'\u00A0'}
-        <RefOTPForm count ={4} spicalCharStop={true} numberEnabled={true} regex={false} focus={false} isSubmit={false} placeHolder={"YYYY"}/> */}
+        <RefOTPForm count ={2} setAlert={this.setAlert} spicalCharStop={false} numberEnabled={false} regex={false} focus={this.state.focus1} isSubmit={false} placeHolder={"DD"}/>-{'\u00A0'}
+        <RefOTPForm count ={2} setAlert={this.setAlert} spicalCharStop={true} numberEnabled={true} regex={false} focus={this.state.focus2} isSubmit={false} placeHolder={"MM"}/>-{'\u00A0'}
+        <RefOTPForm count ={4} setAlert={this.setAlert} spicalCharStop={true} numberEnabled={true} regex={false} focus={this.state.focus3} isSubmit={true} placeHolder={"YYYY"}/>
+        {
+          this.state.alert && <h1> {this.state.alert} </h1>
+        }
+      {/* <FocusInput /> */}
       </div>
+      
     );
   }
 }
