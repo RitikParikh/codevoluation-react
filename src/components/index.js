@@ -23,7 +23,9 @@ import '../App.css';
 // import RefsForm from './RefsForm'
 // import RefOTPForm from './RefOTPForm'
 // import FocusInput from './FocusInput'
-import PortalDemo from './PortalDemo'
+// import PortalDemo from './PortalDemo'
+import ClickCounter from './ClickCounter';
+import HoverCounter from './HoverCounter';
 
 class Basic extends Component {
   /* constructor(props) {
@@ -78,7 +80,9 @@ class Basic extends Component {
         <RefOTPForm count ={4} setAlert={this.setAlert} spicalCharStop={true} numberEnabled={true} regex={false} focus={this.state.focus3} isSubmit={true} placeHolder={"YYYY"}/>
         {this.state.alert && <h1> {this.state.alert} </h1>} */}
       {/* <FocusInput /> */}
-      <PortalDemo/>
+      {/* <PortalDemo/> */}
+      <ClickCounter/>
+      <HoverCounter/>
       </div>
       
     );
