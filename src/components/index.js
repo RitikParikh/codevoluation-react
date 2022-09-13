@@ -24,8 +24,12 @@ import '../App.css';
 // import RefOTPForm from './RefOTPForm'
 // import FocusInput from './FocusInput'
 // import PortalDemo from './PortalDemo'
-import ClickCounter from './ClickCounter';
-import HoverCounter from './HoverCounter';
+// import ClickCounter from './ClickCounter';
+// import HoverCounter from './HoverCounter';
+import ClickCounterTwo from './ClickCounterTwo';
+import HoverCounterTwo from './HoverCounterTwo';
+// import User from './User';
+import CounterNew from './CounterNew';
 
 class Basic extends Component {
   /* constructor(props) {
@@ -79,12 +83,17 @@ class Basic extends Component {
         <RefOTPForm count ={2} setAlert={this.setAlert} spicalCharStop={true} numberEnabled={true} regex={false} focus={this.state.focus2} isSubmit={false} placeHolder={"MM"}/>-{'\u00A0'}
         <RefOTPForm count ={4} setAlert={this.setAlert} spicalCharStop={true} numberEnabled={true} regex={false} focus={this.state.focus3} isSubmit={true} placeHolder={"YYYY"}/>
         {this.state.alert && <h1> {this.state.alert} </h1>} */}
-      {/* <FocusInput /> */}
-      {/* <PortalDemo/> */}
-      <ClickCounter/>
-      <HoverCounter/>
+        {/* <FocusInput /> */}
+        {/* <PortalDemo/> */}
+        {/* <ClickCounter/>
+      <HoverCounter/> */}
+        {/* <ClickCounterTwo/> */}
+        {/* <HoverCounterTwo/> */}
+        {/* <User render  = {(isLoggedIn)=> isLoggedIn ? "Ritik" : "Guest"}/> */}
+        <CounterNew render={(count, incrementCount) => <ClickCounterTwo count={count} incrementCount={incrementCount} ></ClickCounterTwo>} />
+        <CounterNew render={(count, incrementCount) => <HoverCounterTwo count={count} incrementCount={incrementCount} ></HoverCounterTwo>} />
       </div>
-      
+
     );
   }
 }
