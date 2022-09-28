@@ -8,5 +8,5 @@ then
     git commit -m "$1"
     git push
 else 
-    echo "access denied !!"
+    echo "access denied Bakwas error!!"
 fi
