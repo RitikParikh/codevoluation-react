@@ -32,6 +32,7 @@ import '../App.css';
 // import CounterNew from './CounterNew';
 // import ComponentC from './ComponentC';
 // import { UserProvider} from './userContext';
+// import PostList from './PostList';
 
 class Basic extends Component {
   constructor(props) {
@@ -97,6 +98,7 @@ class Basic extends Component {
         {/* <UserProvider value="Ritik" hi="Hi">
           <ComponentC />
         </UserProvider> */}
+        {/* <PostList/> */}
       </div>
 
     );
